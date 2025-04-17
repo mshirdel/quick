@@ -20,4 +20,16 @@ http:
     stack-size: 4
     disable-stack-all: false
     disable-print-stack: false
+database:
+  host: localhost
+  port: 5432
+  user: postgres 
+  password: 123456
+  dbname: quick 
+  connection-timeout: 30s
+  connection-lifetime: 30m
+  pool-size: 100
+  max-idle-connections: 10
+  logger:
+    slow-threshold: 200ms
 `
