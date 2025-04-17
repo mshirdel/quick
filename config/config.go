@@ -7,7 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
+	"github.com/mshirdel/nebula/db/postgres"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 )
@@ -15,8 +16,9 @@ import (
 const _envPrefix = "quick"
 
 type Config struct {
-	Server Server `mapstructure:"server" validate:"required"`
-	HTTP   HTTP   `mapstructure:"http" validate:"required"`
+	Server   Server          `mapstructure:"server" validate:"required"`
+	HTTP     HTTP            `mapstructure:"http" validate:"required"`
+	Database postgres.Config `mapstructure:"database" validate:"required"`
 }
 
 type Server struct {

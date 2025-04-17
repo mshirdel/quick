@@ -1,2 +1,6 @@
 # quick
-Quick is a Golang project template
+
+Quick is a Golang project template that uses:
+
+* Echo
+* Gorm
